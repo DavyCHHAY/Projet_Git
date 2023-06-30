@@ -1,0 +1,3 @@
+fichier a ne pas modifier pour tester gitignore
+30/06/2023
+Davy CHHAY
