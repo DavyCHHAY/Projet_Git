@@ -1,0 +1,11 @@
+#!/bin/sh
+
+commit_msg_filepath="$1"
+commit_msg=$(cat "$commit_msg_filepath")
+
+# Vérifier si le message de commit commence par "AJOUT" ou "FIX"
+if ! echo "$commit_msg" | grep -E -q '^(AJOUT|FIX)'; then
+    echo "Erreur: Le message de commit doit commencer par 'AJOUT' ou 'FIX'"
+    exit 1
+fi
+
